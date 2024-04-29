@@ -108,11 +108,14 @@ const SideDrawer = () => {
                     <Text style={{ color: "black" }} d={{ base: "none", md: "flex" }} px={"4"}>Search User</Text>
                 </Button>
             </Tooltip>
-            <Text fontSize={"2xl"} fontFamily={"Work sans"}>Chat Application</Text>
+            <Text fontSize={"2xl"}
+                fontFamily={"Work sans"}>
+                Chat Application
+            </Text>
             <div>
                 <Menu>
                     <MenuButton p={"1px"}>
-                        <BellIcon fontSize="2xl" m={1} />
+                        <BellIcon fontSize="2xl" m={"1px"} />
                         {notification.length > 0 && (
                             <div className="notification-badge">
                                 <span className="badge">
@@ -140,6 +143,7 @@ const SideDrawer = () => {
                         ))}
                     </MenuList>
                 </Menu>
+
                 <Menu>
                     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
 

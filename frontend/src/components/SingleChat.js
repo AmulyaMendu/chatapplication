@@ -11,7 +11,7 @@ import Lottie from 'react-lottie'
 import animationData from '../animations/typing.json'
 import ScrollableChat from './ScrollableChat'
 import io from "socket.io-client"
-const ENDPOINT = "http://localhost:5000"
+const ENDPOINT = "http://localhost:7000"
 var socket, selectedChatCompare
 
 
