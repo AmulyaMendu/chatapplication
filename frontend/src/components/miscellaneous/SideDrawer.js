@@ -13,9 +13,8 @@ import ChatLoading from '../ChatLoading';
 import axios from "axios"
 import UserListItem from '../UsersAvatar/UserListItem';
 import { getSender } from '../../config/ChatLogics';
-import { Effect } from 'react-notification-badge';
+import '../style.css'
 
-import NotificationBadge from 'react-notification-badge';
 
 const SideDrawer = () => {
     const history = useHistory()
@@ -113,12 +112,17 @@ const SideDrawer = () => {
             <div>
                 <Menu>
                     <MenuButton p={"1px"}>
-                        <NotificationBadge
-                            count={notification.count}
-                            effect={Effect.SCALE}
-                        />
-                        <BellIcon fontSize={"2xl"} m={"1"} />
+                        <BellIcon fontSize="2xl" m={1} />
+                        {notification.length > 0 && (
+                            <div className="notification-badge">
+                                <span className="badge">
+                                    {notification.length}
+                                </span>
+                            </div>
+                        )}
                     </MenuButton>
+
+
                     <MenuList pl={"2px"}>
                         {!notification.length && "No New Messages"}
                         {notification.map((item) => (
